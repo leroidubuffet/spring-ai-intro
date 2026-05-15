@@ -1,0 +1,22 @@
+spring:
+  ai:
+    anthropic:
+      api-key: ${ANTHROPIC_API_KEY}
+      chat:
+        options:
+          model: ${ANTHROPIC_MODEL:claude-sonnet-4-6}
+          max-tokens: 2048
+          temperature: 0.2
+
+resilience4j:
+  retry:
+    instances:
+      llm-call:
+        max-attempts: 4
+        wait-duration: 500ms
+        exponential-backoff-multiplier: 2
+        retry-exceptions:
+          - java.io.IOException
+          - com.example.springaiintro.exception.TransientLlmException
+        ignore-exceptions:
+          - com.example.springaiintro.exception.BadRequestException
