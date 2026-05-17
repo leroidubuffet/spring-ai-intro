@@ -1,6 +1,6 @@
-# Spring AI — Demo (Módulo 2 · Bloque 4)
+# Spring AI — Demo (Módulo 2: Bloque 4)
 
-Proyecto de demostración de los conceptos del notebook `2 spring_ai_intro.ipynb`.
+Proyecto del modulo 2 para la demostración de los conceptos del notebook `2 spring_ai_intro.ipynb`.
 
 ## Requisitos
 
